@@ -39,6 +39,7 @@
     vars["title"] = vars["title"].replace("%20", "&nbsp;");
     
     $("#title").html(vars["title"] || "Title");
+    $("head>title").html(vars["title"] || "Title");
 
     window.setInterval(updateTime, 500);
 })(jQuery); // end of jQuery name space
