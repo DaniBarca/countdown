@@ -34,9 +34,10 @@
 
     if(!vars["title"])
         $("#title").remove();
-
-    vars["title"] = vars["title"].replace("+", "&nbsp;");
-    vars["title"] = vars["title"].replace("%20", "&nbsp;");
+    else{
+        vars["title"] = vars["title"].replace("+", "&nbsp;");
+        vars["title"] = vars["title"].replace("%20", "&nbsp;");
+    }
     
     $("#title").html(vars["title"] || "Title");
     $("head>title").html(vars["title"] || "Title");
