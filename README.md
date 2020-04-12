@@ -3,4 +3,7 @@ A simple web configurable countdown
 
 # Usage
 Pass parameters through url, for example:
-https://danibarca.com/countdown/?timestamp=2020-04-15T21:46:45.462Z&title=HELLO WORLD
+https://danibarca.com/countdown/?timestamp=2020-04-15T21:46:45.462Z&title=HELLO+WORLD
+
+# TODO
+Form that lets select a date, time and title, and outputs proper url with parameters.
