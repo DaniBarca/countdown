@@ -24,7 +24,7 @@
             $("#days-container").remove();
         
         if(d<2)
-            $("#day-s").html("day");
+            $("#day-s").html("&nbsp;day");
         
         $("#days").html(d.toString());
         $("#hours").html(h.toString().padStart(2,"0"));
