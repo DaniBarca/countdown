@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Timer Generator</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="valign-wrapper" id="content">
+    <div class="container" id="countdown-container">
+      <h1 class="header center orange-text" id="title">Title</h1>
+      
+      <div class="center row" id="countdown">
+        <div class="center col s12" id="days-container">
+          <h1 id="days">0</h1><h1 id="day-s">&nbsp;days</h1>
+        </div>
+        <div class="center col s12 row" id="clock-container">
+          <h1 id="hours">00</h1><h1>&nbsp;:&nbsp;</h1><h1 id="minutes">00</h1><h1>&nbsp;:&nbsp;</h1><h1 id="seconds">00</h1>
+        </div>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/countdown.js"></script>
+
+  </body>
+</html>
