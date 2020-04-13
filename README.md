@@ -3,7 +3,7 @@ A simple web configurable countdown
 
 # Usage
 Pass parameters through url, for example:
-https://danibarca.com/countdown/?timestamp=2020-04-15T21:46:45.462Z&title=HELLO+WORLD
+https://danibarca.com/countdown/?timestamp=2025-04-15T21:46:45.462Z&title=HELLO+WORLD
 
 # Options
 * title: set tab title and show it, otherwise tab will be named "Countdown"
