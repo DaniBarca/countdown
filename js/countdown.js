@@ -44,6 +44,7 @@
     else{
         vars["title"] = decodeURIComponent(vars["title"])
         vars["title"] = vars["title"].replace(" ", "&nbsp;")
+        vars["title"] = vars["title"].replace("+", "&nbsp;")
     }
     
     $("#title").html(vars["title"] || "Title");
