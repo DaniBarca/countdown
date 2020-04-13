@@ -10,8 +10,8 @@
     var vars = getUrlVars();
     var target_time = new Date(JSON.parse("\""+vars["timestamp"]+"\""));
 
-    var day = decodeURIComponent(vars["day"]) || "day";
-    var days = decodeURIComponent(vars["days"]) || "days";
+    var day = vars["day"] != undefined ? decodeURIComponent(vars["day"]) : "day";
+    var days = vars["days"] != undefined ? decodeURIComponent(vars["days"]) : "days";
 
     (updateTime = function(){
         var now = new Date();
