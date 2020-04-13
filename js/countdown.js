@@ -9,6 +9,10 @@
 
     var vars = getUrlVars();
     var target_time = new Date(JSON.parse("\""+vars["timestamp"]+"\""));
+
+    var day = decodeURIComponent(vars["day"]) || "day";
+    var days = decodeURIComponent(vars["days"]) || "days";
+
     (updateTime = function(){
         var now = new Date();
         var seconds = 0;
@@ -23,8 +27,11 @@
         if(d<=0)
             $("#days-container").remove();
         
-        if(d<2)
-            $("#day-s").html("&nbsp;day");
+        if(d<2){
+            $("#day-s").html("&nbsp;" + day);
+        } else {
+            $("#day-s").html("&nbsp;" + days);
+        }
         
         $("#days").html(d.toString());
         $("#hours").html(h.toString().padStart(2,"0"));
@@ -35,8 +42,8 @@
     if(!vars["title"])
         $("#title").remove();
     else{
-        vars["title"] = vars["title"].replace("+", "&nbsp;");
-        vars["title"] = vars["title"].replace("%20", "&nbsp;");
+        vars["title"] = decodeURIComponent(vars["title"])
+        vars["title"] = vars["title"].replace(" ", "&nbsp;")
     }
     
     $("#title").html(vars["title"] || "Title");
