@@ -13,6 +13,19 @@
     var day = vars["day"] != undefined ? decodeURIComponent(vars["day"]) : "day";
     var days = vars["days"] != undefined ? decodeURIComponent(vars["days"]) : "days";
 
+    var font = vars["font"];
+
+    if(font != undefined)
+    {
+        WebFont.load({
+            google: {
+                families: [font]
+            }
+        });
+
+        $("#title").style.fontFamily = font;
+    }
+
     (updateTime = function(){
         var now = new Date();
         var seconds = 0;
