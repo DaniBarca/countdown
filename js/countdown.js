@@ -13,18 +13,42 @@
     var day = vars["day"] != undefined ? decodeURIComponent(vars["day"]) : "day";
     var days = vars["days"] != undefined ? decodeURIComponent(vars["days"]) : "days";
 
-    var font = vars["font"] != undefined ? decodeURIComponent(vars["font"]) : undefined;
+    var title_font = vars["title-font"] != undefined ? decodeURIComponent(vars["title-font"]) : undefined;
+    var days_font = vars["days-font"] != undefined ? decodeURIComponent(vars["days-font"]) : undefined;
 
-    if(font != undefined)
+    var title_scale = vars["title_scale"] != undefined ? parseInt(decodeURIComponent(vars["title-scale"])) : 100;
+    var days_scale = vars["days_scale"] != undefined ? parseInt(decodeURIComponent(vars["days-scale"])) : 100;
+
+    if(title_font != undefined)
     {
         WebFont.load({
             google: {
-                families: [font]
+                families: [title_font]
             }
         });
 
-        $("#title").css("font-family", font);
+        $("#title").css("font-family", title_font);
     }
+
+    if(days_font != undefined)
+    {
+        WebFont.load({
+            google: {
+                families:[days_font]
+            }
+        });
+
+        $("#days").css("font-family", days_font)
+        $("#hours").css("font-family", days_font)
+        $("#minutes").css("font-family", days_font)
+        $("#seconds").css("font-family", days_font)
+    }
+
+    $("#title").css("transform", "scale(" + (title_scale / 100) + ")");
+    $("#days").css("transform", "scale(" + (days_scale / 100) + ")");
+    $("#hours").css("transform", "scale(" + (days_scale / 100) + ")");
+    $("#minutes").css("transform", "scale(" + (days_scale / 100) + ")");
+    $("#seconds").css("transform", "scale(" + (days_scale / 100) + ")");
 
     (updateTime = function(){
         var now = new Date();
