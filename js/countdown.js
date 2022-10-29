@@ -23,7 +23,7 @@
             }
         });
 
-        $("#title").style.fontFamily = font;
+        $("#title").css("font-family", font);
     }
 
     (updateTime = function(){
