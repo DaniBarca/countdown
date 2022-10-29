@@ -13,7 +13,7 @@
     var day = vars["day"] != undefined ? decodeURIComponent(vars["day"]) : "day";
     var days = vars["days"] != undefined ? decodeURIComponent(vars["days"]) : "days";
 
-    var font = vars["font"];
+    var font = vars["font"] != undefined ? decodeURIComponent(vars["font"]) : undefined;
 
     if(font != undefined)
     {
