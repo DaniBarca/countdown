@@ -38,6 +38,7 @@
             }
         });
 
+        $("#day-s").css("font-family", days_font)
         $("#days").css("font-family", days_font)
         $("#hours").css("font-family", days_font)
         $("#minutes").css("font-family", days_font)
@@ -45,6 +46,7 @@
     }
 
     $("#title").css("transform", "scale(" + (title_scale / 100) + ")");
+    $("#day-s").css("transform", "scale(" + (days_scale / 100) + ")");
     $("#days").css("transform", "scale(" + (days_scale / 100) + ")");
     $("#hours").css("transform", "scale(" + (days_scale / 100) + ")");
     $("#minutes").css("transform", "scale(" + (days_scale / 100) + ")");
