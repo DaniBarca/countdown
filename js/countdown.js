@@ -16,8 +16,8 @@
     var title_font = vars["title-font"] != undefined ? decodeURIComponent(vars["title-font"]) : undefined;
     var days_font = vars["days-font"] != undefined ? decodeURIComponent(vars["days-font"]) : undefined;
 
-    var title_scale = vars["title_scale"] != undefined ? parseInt(decodeURIComponent(vars["title-scale"])) : 100;
-    var days_scale = vars["days_scale"] != undefined ? parseInt(decodeURIComponent(vars["days-scale"])) : 100;
+    var title_scale = vars["title-scale"] != undefined ? parseInt(decodeURIComponent(vars["title-scale"])) : 100;
+    var days_scale = vars["days-scale"] != undefined ? parseInt(decodeURIComponent(vars["days-scale"])) : 100;
 
     if(title_font != undefined)
     {
