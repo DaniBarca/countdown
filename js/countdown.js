@@ -22,13 +22,12 @@
     var minutes = vars["minutes"] != undefined ? decodeURIComponent(vars["minutes"]) : "minutes";
 
     var second = vars["second"] != undefined ? decodeURIComponent(vars["second"]) : "second";
-    var seconds = vars["seconds"] != undefined ? decodeURIComponent(vars["seconds"]) : "seconds";
+    var seconds_text = vars["seconds"] != undefined ? decodeURIComponent(vars["seconds"]) : "seconds";
 
     var title_font = vars["title-font"] != undefined ? decodeURIComponent(vars["title-font"]) : undefined;
     var days_font = vars["days-font"] != undefined ? decodeURIComponent(vars["days-font"]) : undefined;
 
     var title_scale = vars["title-scale"] != undefined ? parseInt(decodeURIComponent(vars["title-scale"])) : 100;
-    var days_scale = vars["days-scale"] != undefined ? parseInt(decodeURIComponent(vars["days-scale"])) : 100;
     var scale = vars["scale"] != undefined ? parseInt(decodeURIComponent(vars["scale"])) : 100;
 
     if(title_font != undefined)
@@ -55,15 +54,13 @@
         $("#hours").css("font-family", days_font)
         $("#minutes").css("font-family", days_font)
         $("#seconds").css("font-family", days_font)
+        $("#minutes-seconds").css("font-family", days_font)
+        $("#hours-minutes").css("font-family", days_font)
+        $("#post-seconds").css("font-family", days_font)
     }
 
     $("#countdown-container").css("transform", "scale(" + (scale / 100) + ")");
     $("#title").css("transform", "scale(" + (title_scale / 100) + ")");
-    $("#day-s").css("transform", "scale(" + (days_scale / 100) + ")");
-    $("#days").css("transform", "scale(" + (days_scale / 100) + ")");
-    $("#hours").css("transform", "scale(" + (days_scale / 100) + ")");
-    $("#minutes").css("transform", "scale(" + (days_scale / 100) + ")");
-    $("#seconds").css("transform", "scale(" + (days_scale / 100) + ")");
 
     (updateTime = function(){
         var now = new Date();
@@ -103,9 +100,9 @@
                 $("#minutes-seconds").html("&nbsp;" + minutes);
 
             if(s == 1)
-                $("#seconds").html("&nbsp;" + second);
+                $("#post-seconds").html("&nbsp;" + second);
             else
-                $("#seconds").html("&nbsp;" + seconds);
+                $("#post-seconds").html("&nbsp;" + seconds_text);
         }
     })();
 
