@@ -46,7 +46,7 @@
         $("#seconds").css("font-family", days_font)
     }
 
-    $("#content").css("transform", "scale(" + (scale / 100) + ")");
+    $("#countdown-container").css("transform", "scale(" + (scale / 100) + ")");
     $("#title").css("transform", "scale(" + (title_scale / 100) + ")");
     $("#day-s").css("transform", "scale(" + (days_scale / 100) + ")");
     $("#days").css("transform", "scale(" + (days_scale / 100) + ")");
