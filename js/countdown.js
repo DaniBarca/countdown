@@ -10,8 +10,19 @@
     var vars = getUrlVars();
     var target_time = new Date(JSON.parse("\""+vars["timestamp"]+"\""));
 
+    var use_dots = vars["use-dots"] != undefined ? decodeURIComponent(vars["use-dots"]) === "true" : false;
+
     var day = vars["day"] != undefined ? decodeURIComponent(vars["day"]) : "day";
     var days = vars["days"] != undefined ? decodeURIComponent(vars["days"]) : "days";
+
+    var hour = vars["hour"] != undefined ? decodeURIComponent(vars["hour"]) : "hour";
+    var hours = vars["hours"] != undefined ? decodeURIComponent(vars["hours"]) : "hours";
+
+    var minute = vars["minute"] != undefined ? decodeURIComponent(vars["minute"]) : "minute";
+    var minutes = vars["minutes"] != undefined ? decodeURIComponent(vars["minutes"]) : "minutes";
+
+    var second = vars["second"] != undefined ? decodeURIComponent(vars["second"]) : "second";
+    var seconds = vars["seconds"] != undefined ? decodeURIComponent(vars["seconds"]) : "seconds";
 
     var title_font = vars["title-font"] != undefined ? decodeURIComponent(vars["title-font"]) : undefined;
     var days_font = vars["days-font"] != undefined ? decodeURIComponent(vars["days-font"]) : undefined;
