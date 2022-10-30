@@ -18,6 +18,7 @@
 
     var title_scale = vars["title-scale"] != undefined ? parseInt(decodeURIComponent(vars["title-scale"])) : 100;
     var days_scale = vars["days-scale"] != undefined ? parseInt(decodeURIComponent(vars["days-scale"])) : 100;
+    var scale = vars["scale"] != undefined ? parseInt(decodeURIComponent(vars["scale"])) : 100;
 
     if(title_font != undefined)
     {
@@ -45,6 +46,7 @@
         $("#seconds").css("font-family", days_font)
     }
 
+    $("#content").css("transform", "scale(" + (scale / 100) + ")");
     $("#title").css("transform", "scale(" + (title_scale / 100) + ")");
     $("#day-s").css("transform", "scale(" + (days_scale / 100) + ")");
     $("#days").css("transform", "scale(" + (days_scale / 100) + ")");
