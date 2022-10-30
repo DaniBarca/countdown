@@ -79,7 +79,7 @@
         if(d<=0)
             $("#days-container").remove();
         
-        if(d<2){
+        if(d==1){
             $("#day-s").html("&nbsp;" + day);
         } else {
             $("#day-s").html("&nbsp;" + days);
@@ -89,6 +89,24 @@
         $("#hours").html(h.toString().padStart(2,"0"));
         $("#minutes").html(m.toString().padStart(2,"0"));
         $("#seconds").html(s.toString().padStart(2,"0"));
+
+        if(!use_dots)
+        {
+            if(h == 1)
+                $("#hours-minutes").html("&nbsp;" + hour);
+            else
+                $("#hours-minutes").html("&nbsp;" + hours);
+
+            if(m == 1)
+                $("#minutes-seconds").html("&nbsp;" + minute);
+            else
+                $("#minutes-seconds").html("&nbsp;" + minutes);
+
+            if(s == 1)
+                $("#seconds").html("&nbsp;" + second);
+            else
+                $("#seconds").html("&nbsp;" + seconds);
+        }
     })();
 
     if(!vars["title"])
@@ -98,6 +116,8 @@
         vars["title"] = vars["title"].replace(" ", "&nbsp;")
         vars["title"] = vars["title"].replace("+", "&nbsp;")
     }
+
+    
     
     $("#title").html(vars["title"] || "Title");
     $("head>title").html(vars["title"] || "Title");
